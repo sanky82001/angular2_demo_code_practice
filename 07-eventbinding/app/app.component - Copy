@@ -1,0 +1,33 @@
+// In Event binding, user actions result in flow of data from element to component.
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: 'app/app.component.html'
+})
+export class AppComponent {
+  title: string = 'Demonstration of event binding';
+  counter: number = 0;
+  inputData: string = 'Hello';
+
+  incrementCounter() {
+    this.counter = this.counter + 1;
+  }
+
+  google: string = "Google";
+  amazon: string = "Amazon";
+
+  firstWord: string = this.google;
+  secondWord: string = this.amazon;
+
+  swapWord() {
+    this.firstWord = (this.firstWord == this.google) ? this.amazon : this.google;
+    this.secondWord = (this.secondWord == this.google) ? this.amazon : this.google;
+    return;
+  }
+
+/*  setInputData(value: string) {
+    this.inputData = value;
+  }
+*/
+}

@@ -1,0 +1,8 @@
+<div>
+  <h2>{{title}}</h2>
+  <ul>
+    <li *ngFor="let fruit of fruits" [class.selected]="fruit.selected" (click)='onClick(fruit)'>
+      {{ fruit.name }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <h1>{{title}}</h1>
+  <label>Enter your name:</label>
+  <input type="text" [(ngModel)]="name" />
+  <br/><br/>
+  Inputted name: <b>{{name}}</b>
+  <br/><br/>
+  <label>Enter your location:</label>
+  <input type="text" [ngModel]="location" (ngModelChange)="setUpperCaseLocation($event)" />
+  <br/><br/>
+  Location: <b>{{location}}</b>
+</div>
+
+
